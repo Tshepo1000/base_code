@@ -56,16 +56,18 @@ html, body{
     }
 
     header img{
-        height: 120px;
-        width: 145px;
-        margin-top: 18px;
-        margin-left: 40px;
+        height: 180px;
+        width: 195px;
+        margin-top: 15px;
+        margin-left: 150px;
+
+
     }
 
     /* navigation style */
     .navigation-links{
         display: var(--display-flex);
-        width: 80%;
+        width: 60%;
         justify-content: center;
         align-items: center;
     }
@@ -83,14 +85,14 @@ html, body{
     ul li a{
         text-decoration: none;
         color: var(--links-color);
-        font-size: large;
+        font-size: 15px;
     }
 
     /* links hover */
     .navigation-list li a:hover{
         transition: 0.2s;
-        border-bottom: 2px solid #6EACDA;
-        color: #6EACDA;
+        border-bottom: 2px solid #28577a;
+        color: #28577a;
     }
 
     /* center container */
@@ -122,6 +124,7 @@ html, body{
     .carousel-inner img{
         width: var(--full-width);
         height: var(--full-width);
+        filter: brightness(50%);
     }
 
 }
