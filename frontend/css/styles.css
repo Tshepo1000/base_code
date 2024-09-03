@@ -26,7 +26,7 @@
 
 /* page font */
 body{
-    font-family: "Lora", serif;
+    font-family: "SUSE", sans-serif;
     font-optical-sizing: auto;
     background-color: var(--primary-color);
 }
@@ -145,20 +145,21 @@ html, body{
     
     .carousel-caption h2, h3, p{
         text-align: justify;
-        font-family: "Lora", serif;
+        font-family: "SUSE", sans-serif;
         font-optical-sizing: auto;
     }
 
     .carousel-caption h2{
-        font-weight: bolder;
-        font-size: 3.5rem;
+        font-weight: bold;
+        font-size: 3rem;
     }
 
     .carousel-caption h3{
-        font-size: 2.3rem;
+        font-size: 2rem;
     }
 
     .carousel-caption p{
+        width: 600px;
         font-size: large;
         padding-top: 30px;
     }
@@ -287,26 +288,27 @@ html, body{
 
      /* carousel slides image captions */
     .carousel-caption{   
-        bottom: 10%;
-        left: 0;
-        right: 0;
-        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 80%;
         text-align: center;
     }  
     
     .carousel-caption h2{
         font-weight: bolder;
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-    }
-
-    .carousel-caption h3{
-        font-size: 1rem;
+        font-size: 1.8rem;
         margin-bottom: 15px;
     }
 
+    .carousel-caption h3{
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+
     .carousel-caption p{
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 }
 
