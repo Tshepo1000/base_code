@@ -47,6 +47,7 @@ html, body{
     .header-section{
         z-index: 1;
         position: var(--position-fixed);
+        top: 0;
         padding: var(--padding);
         display: var(--display-flex);
         align-items: center;
@@ -57,12 +58,9 @@ html, body{
     }
 
     header img{
-        height: 180px;
-        width: 195px;
-        margin-top: 15px;
-        margin-left: 150px;
-
-
+        height: 85px;
+        width: 105px;
+        margin-left: 12%;
     }
 
     /* navigation style */
@@ -183,9 +181,9 @@ html, body{
 {
     .header-section{
         position: fixed;
-        top: 0%;
+        display: flex;
         width: 100%;
-        height: 120px;
+        height: 16%;
         z-index: 2;
         box-shadow: var(--box-shadow);
         background-color: var(--secondary-color);
@@ -193,10 +191,11 @@ html, body{
 
     /* logo */
     .header-section img{
-        position: fixed;
-        left: 2px;
-        top: -4%;
-        height: 200px;
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        height: 100px;
     }
 
     .navigation-links{
@@ -204,7 +203,7 @@ html, body{
         width: 0;
         position: var(--position-fixed);
         z-index: 1;
-        top: 13%;
+        top: 16%;
         left: 0;
         background-color: var(--primary-color);
         overflow-x: hidden;
@@ -238,29 +237,24 @@ html, body{
     }
 
     .navigation-links .navigation-list a:hover, .navigation-links .navigation-list a:focus{
-        color: #6EACDA;
+        color: #28577a;
     }
 
     .closebtn{
-        position: fixed;
-        font-size: 60px;
-        right: 30px;
-        top: 0;
+        font-size: 36px;
     }
 
-    .header-section span{
-        position: fixed;
+    #hamburgerIcon{
         font-size: 36px;
-        top: 10px;
-        right: 45px;
     }
 
     /* hide small screen buttons */
-    #hamburgerIcon{
-        position: fixed;
-        top: 3%;
+    #hamburgerIcon, .closebtn{
         display: block;
-
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translate(-50%, -50%);
     }
 
     .main-container{ 
@@ -291,24 +285,24 @@ html, body{
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        height: 80%;
+        /* justify-content: center; */
+        height: 70%;
         text-align: center;
     }  
     
     .carousel-caption h2{
         font-weight: bolder;
-        font-size: 1.8rem;
+        font-size: 1.3rem;
         margin-bottom: 15px;
     }
 
     .carousel-caption h3{
-        font-size: 1.5rem;
+        font-size: 1rem;
         margin-bottom: 30px;
     }
 
     .carousel-caption p{
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 }
 
