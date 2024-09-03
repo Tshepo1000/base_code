@@ -195,7 +195,7 @@ html, body{
         top: 50%;
         left: 20%;
         transform: translate(-50%, -50%);
-        height: 100px;
+        height: 90%;
     }
 
     .navigation-links{
