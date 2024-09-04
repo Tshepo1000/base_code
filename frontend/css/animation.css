@@ -1,5 +1,10 @@
 /* This changes all the animations globally */
-:root {
-    --animate-duration: 2s;
-    --animate-delay: 0.9s;
+:root{
+    --animate-duration: 0.8s;
+    --animate-delay: 0.5s;
+}
+
+.animate__animated{
+    animation-duration: var(--animate-duration);
+    animation-delay: var(--animate-delay);
 }

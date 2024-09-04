@@ -1,20 +1,25 @@
-/* variables */
+/* displays */
 :root{
-    --primary-color: #f0f0f0;
-    --secondary-color: white;
-    --links-color: #021526;
-
     --display-flex: flex;
     --display-grid: grid;
 
     --full-width: 100%;
-
     --position-fixed: fixed;
     
     --font-size: 16px;
+    --font-style: "SUSE", sans-serif;
     --padding: 10px;
 
-    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 08);
+}
+
+/* colors */
+:root{
+    --primary-color: #f0f0f0;
+    --secondary-color: white;
+    --links-color: #021526;
+    --main-color: #28577a;
+    --dark-gradient: linear-gradient(rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%);
 }
 
 /* reset default styling on the page */
@@ -26,7 +31,7 @@
 
 /* page font */
 body{
-    font-family: "SUSE", sans-serif;
+    font-family: var(--font-style);
     font-optical-sizing: auto;
     background-color: var(--primary-color);
 }
@@ -143,7 +148,7 @@ html, body{
     
     .carousel-caption h2, h3, p{
         text-align: justify;
-        font-family: "SUSE", sans-serif;
+        font-family: var(--font-style);
         font-optical-sizing: auto;
     }
 
@@ -160,6 +165,31 @@ html, body{
         width: 600px;
         font-size: large;
         padding-top: 30px;
+    }
+
+    /* learn more/about us */
+    #about-button, #contact-button, #services-button{
+        margin-top: 30px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+        /* button style */
+        background-color: #3a707c;
+        color: var(--primary-color);
+        font-family: var(--font-style);
+        height: 40px;
+        width: 150px;
+        border: none;
+        border-radius: 7px;
+        align-items: center;
+        box-shadow: var(--box-shadow);
+        letter-spacing: 2px;
+    }
+
+    #about-button:hover, #contact-button:hover, #services-button:hover{
+        background-color: transparent;
+        border: 1px solid #3a707c;
     }
 
 }
@@ -199,7 +229,7 @@ html, body{
     }
 
     .navigation-links{
-        height: 60%;
+        height: 70%;
         width: 0;
         position: var(--position-fixed);
         z-index: 1;
@@ -282,10 +312,6 @@ html, body{
 
      /* carousel slides image captions */
     .carousel-caption{   
-        display: flex;
-        flex-direction: column;
-        /* align-items: center; */
-        align-items: flex-start;
         height: 70%;
         text-align: center;
     }  
@@ -303,6 +329,27 @@ html, body{
 
     .carousel-caption p{
         font-size: 0.8rem;
+        text-align: justify;
+    }
+
+    /* learn more/about us */
+    #about-button, #contact-button, #services-button{
+        /* button style */
+        background-color: #3a707c;
+        color: var(--primary-color);
+        font-family: var(--font-style);
+        margin-top: 40px;
+        height: 35px;
+        width: 100px;
+        border: none;
+        border-radius: 7px;
+        box-shadow: var(--box-shadow);
+        font-size: 13px;
+    }
+
+    #about-button:hover, #contact-button:hover, #services-button:hover{
+        background-color: transparent;
+        border: 1px solid #3a707c;
     }
 }
 

@@ -19,6 +19,7 @@
 
     <!-- css animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="frontend/css/animation.css">
 </head>
 <body>
     <!-- header section for logo and navigation -->
@@ -40,6 +41,7 @@
         </nav>
     </header>
 
+    <!-- home section -->
     <section class="main-container">
         <!-- carousel slides -->
         <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
@@ -53,7 +55,7 @@
                 <div class="carousel-item active">
                     <img src="frontend/images/1536643.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption">
-                        <h2 class="animate__animated animate__fadeInDown">Welcome to [Your Company Name]</h2> 
+                        <h2 class="animate__animated animate__fadeInDown">Welcome to WeldCraft</h2> 
                         <h3 class="animate__animated animate__fadeInLeft">Where sparks fly and strong bonds are forged!</h3> 
                         <p class="animate__animated animate__fadeInBottomLeft">
                             Whether you need precision welding or custom metalwork, we’re here to 
@@ -64,7 +66,7 @@
                             creations, our skilled team is dedicated to delivering 
                             
                             results that stand the test of time. 
-                            With [X] years of experience and a commitment 
+                            With 8 years of experience and a commitment 
                             
                             to excellence, we turn metal into masterpieces. 
                             Let's build something incredible 
@@ -72,58 +74,47 @@
                             together                           
                             your ideas, our expertise, limitless possibilities!
                         </p>
-                    </div>
+                        <!-- learn more button -->
+                        <button class="animate__animated animate__fadeInUp" id="about-button">Learn More</button>
+                    </div>                    
                 </div>
+
                 <!-- second slide -->
                 <div class="carousel-item">
                     <img src="frontend/images/2373566.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption">
-                        <h2>Welcome to [Your Company Name]</h2> 
-                        <h3>Where sparks fly and strong bonds are forged!</h3> 
-                        <p>
-                            Whether you need precision welding or custom metalwork, we’re here to                            
-                            bring your visions to life with expert craftsmanship and unmatched quality. 
-                        
-                            From industrial projects to artistic 
-                            creations, our skilled team is dedicated to delivering 
-                            
-                            results that stand the test of time. 
-                            With [X] years of experience and a commitment 
-                            
-                            to excellence, we turn metal into masterpieces. 
-                            Let's build something incredible 
-                            
-                            together                           
-                            your ideas, our expertise, limitless possibilities!
-                        </p>    
+                        <h2 class="animate__animated animate__fadeInDown">Welcome to WeldCraft</h2> 
+                        <h3 class="animate__animated animate__fadeInRight">Forging Excellence, One Weld at a Time</h3> 
+                        <p class="animate__animated animate__fadeInBottomRight">
+                            At WeldCraft, we don't just join metals, we forge connections 
+                            that last a lifetime. Our expert welders bring precision and 
+                            artistry to every project, ensuring strength and durability 
+                            with every spark. Whether it's industrial fabrication or custom 
+                            designs, we turn your vision into a reality, one flawless weld at a time.
+                        </p>  
+                        <!-- contact us button -->
+                        <button class="animate__animated animate__fadeInUp" id="contact-button">Contact Us</button>  
                     </div>
                 </div>
+                
                 <!-- third slide -->
                 <div class="carousel-item">
                     <img src="frontend/images/5380069.jpg" class="d-block w-100" alt="...">
                     <div class="carousel-caption">
-                        <h2>Welcome to [Your Company Name]</h2> 
-                        <h3>Where sparks fly and strong bonds are forged!</h3> 
-                        <p>
-                            Whether you need precision welding or custom metalwork, we’re here to 
-                            
-                            bring your visions to life with expert craftsmanship and unmatched quality. 
-                            
-                            From industrial projects to artistic 
-                            creations, our skilled team is dedicated to delivering 
-                            
-                            results that stand the test of time. 
-                            With [X] years of experience and a commitment 
-                            
-                            to excellence, we turn metal into masterpieces. 
-                            Let's build something incredible 
-                            
-                            together                           
-                            your ideas, our expertise, limitless possibilities!
-                        </p>   
+                        <h2 class="animate__animated animate__fadeInDown">Welcome to WeldCraft</h2> 
+                        <h3 class="animate__animated animate__fadeInLeft">Crafting Strength with Precision and Passion</h3> 
+                        <p class="animate__animated animate__fadeInBottomLeft">
+                            From the first arc to the final finish, WeldCraft is 
+                            where innovation meets craftsmanship. We specialize in 
+                            creating robust, reliable structures that stand the test 
+                            of time. Trust us to deliver exceptional quality, whether 
+                            you're building from scratch or reinforcing what's already 
+                            great. Your project deserves the best, and that's exactly what we deliver.
+                        </p>  
+                         <!-- services us button -->
+                         <button class="animate__animated animate__fadeInUp" id="services-button">Our Services</button>  
                     </div>
                 </div>
-
             </div>
 
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
@@ -136,6 +127,11 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+    </section>
+
+    <!-- about section -->
+    <section class="aboutUs-container">
+
     </section>
 
     <script src="frontend/js/script.js">
