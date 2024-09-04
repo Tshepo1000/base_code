@@ -32,17 +32,17 @@
         <!-- navigation -->
         <nav class="navigation-links" id="myNav">
             <ul class="navigation-list">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact Us</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- home section -->
-    <section class="main-container">
+    <section class="main-container" id="home">
         <!-- carousel slides -->
         <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
             <div class="carousel-indicators">
@@ -71,11 +71,11 @@
                             to excellence, we turn metal into masterpieces. 
                             Let's build something incredible 
                         
-                            together                           
+                            together                         
                             your ideas, our expertise, limitless possibilities!
                         </p>
                         <!-- learn more button -->
-                        <button class="animate__animated animate__fadeInUp" id="about-button">Learn More</button>
+                        <button class="animate__animated animate__fadeInUp" id="about-button" onclick="scrollToAboutUsSection()">Learn More</button>
                     </div>                    
                 </div>
 
@@ -93,7 +93,7 @@
                             designs, we turn your vision into a reality, one flawless weld at a time.
                         </p>  
                         <!-- contact us button -->
-                        <button class="animate__animated animate__fadeInUp" id="contact-button">Contact Us</button>  
+                        <button class="animate__animated animate__fadeInUp" id="contact-button" onclick="scrollToContactUsSection()">Contact Us</button>  
                     </div>
                 </div>
                 
@@ -130,9 +130,24 @@
     </section>
 
     <!-- about section -->
-    <section class="aboutUs-container">
+    <section class="aboutUs-container" id="about" style="height: 100vh; background-color: white;">
+        <div class="aboutUs-content-container">
+            <!-- a text about the company -->
+            <div class="aboutUs-text">
 
+            </div>
+
+            <!-- product images -->
+            <div class="aboutUs-images">
+
+            </div>
+        </div>
     </section>
+
+    <!-- contact us section -->
+     <section class="contactUs-container" id="contact" style="height: 100vh;">
+
+     </section>
 
     <script src="frontend/js/script.js">
        

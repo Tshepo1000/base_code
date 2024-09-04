@@ -22,6 +22,26 @@
     --dark-gradient: linear-gradient(rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%);
 }
 
+/* smooth scrolling */
+html{
+    scroll-behavior: smooth;
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4f4f4;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+}
+
 /* reset default styling on the page */
 *{
     margin: 0;
@@ -95,7 +115,7 @@ html, body{
     }
 
     /* links focus */
-    .navigation-links .navigation-list a:focus{
+    .navigation-links .navigation-list a:active{
         border-bottom: 2px solid #28577a;
         color: #28577a;
     }
