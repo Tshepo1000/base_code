@@ -17,9 +17,10 @@
 :root{
     --primary-color: #f0f0f0;
     --secondary-color: white;
-    --links-color: #021526;
+    --links-color: #6bf2fc;
     --main-color: #28577a;
     --dark-gradient: linear-gradient(rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%);
+    --darker-gradient: linear-gradient(rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.9) 50%);
 }
 
 /* smooth scrolling */
@@ -76,22 +77,24 @@ html, body{
         padding: var(--padding);
         display: var(--display-flex);
         align-items: center;
-        background-color: var(--secondary-color);
+        background: var(--dark-gradient);
         width: var(--full-width);
         height: 100px;
         box-shadow: var(--box-shadow);
+        backdrop-filter: blur(10px); /* Apply the blur */
+        -webkit-backdrop-filter: blur(20px);
     }
 
     header img{
-        height: 90px;
-        width: 100px;
-        margin-left: 12%;
+        height: 95px;
+        width: 300px;
+        margin-left: 8%;
     }
 
     /* navigation style */
     .navigation-links{
         display: var(--display-flex);
-        width: 60%;
+        width: 50%;
         justify-content: center;
         align-items: center;
     }
@@ -123,8 +126,8 @@ html, body{
     /* links hover */
     .navigation-list li a:hover{
         transition: 0.2s;
-        border-bottom: 2px solid #28577a;
-        color: #28577a;
+        border-bottom: 2px solid #67fa93;
+        color: #5beece;
     }
 
     /* center container */
@@ -236,26 +239,27 @@ html, body{
         height: 16%;
         z-index: 2;
         box-shadow: var(--box-shadow);
-        background-color: var(--secondary-color);
+        background: var(--dark-gradient);        
     }
 
     /* logo */
     .header-section img{
         position: absolute;
         top: 50%;
-        left: 20%;
+        left: 30%;
         transform: translate(-50%, -50%);
-        height: 90%;
+        height: 90px;
     }
 
     .navigation-links{
-        height: 70%;
+        backdrop-filter: blur(20px);
+        height: 100%;
         width: 0;
         position: var(--position-fixed);
         z-index: 1;
         top: 16%;
         left: 0;
-        background-color: var(--primary-color);
+        background: transparent;
         overflow-x: hidden;
         transition: 0.5s;
         box-shadow: var(--box-shadow);
@@ -273,7 +277,7 @@ html, body{
         padding: 8px;
         text-decoration: none;
         font-size: 36px;
-        color: #181717;
+        color: var(--links-color);
         display: block;
         transition: 0.3s;
     }
@@ -296,6 +300,7 @@ html, body{
 
     #hamburgerIcon{
         font-size: 36px;
+       
     }
 
     /* hide small screen buttons */
@@ -305,6 +310,7 @@ html, body{
         top: 50%;
         right: 5%;
         transform: translate(-50%, -50%);
+        color: var(--links-color);
     }
 
     .main-container{ 
