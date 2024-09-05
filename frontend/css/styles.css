@@ -258,6 +258,7 @@ html, body{
 
     .navigation-links{
         backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px); /* Safari support */
         height: 100%;
         width: 0;
         position: var(--position-fixed);
