@@ -65,6 +65,11 @@ html, body{
 /* hide small screen buttons */
 #closebtn, #hamburgerIcon{
     display: none;
+}  
+
+/* Disable scrolling */
+.no-scroll {
+    overflow: hidden;
 }
 
 @media (min-width: 992px)
@@ -277,7 +282,7 @@ html, body{
         padding: 8px;
         text-decoration: none;
         font-size: 36px;
-        color: var(--links-color);
+        color: var(--primary-color);
         display: block;
         transition: 0.3s;
     }
@@ -291,7 +296,7 @@ html, body{
     }
 
     .navigation-links .navigation-list a:hover, .navigation-links .navigation-list a:focus{
-        color: #28577a;
+        color: var(--links-color);
     }
 
     .closebtn{
@@ -377,5 +382,6 @@ html, body{
         background-color: transparent;
         border: 1px solid #3a707c;
     }
+
 }
 
