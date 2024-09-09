@@ -170,7 +170,7 @@ html, body{
     /* carousel slides image captions */
     .carousel-caption {   
         position: absolute;
-        top: 30%;
+        top: 20%;
         text-align: left; 
     }  
     
@@ -225,13 +225,23 @@ html, body{
 /* small tablets */
 @media (min-width: 768px) and (max-width: 991px)
 {
-    
+    /* carousel slides image captions */
+    .carousel-caption {   
+        position: absolute;
+        top: 10%;
+        text-align: left; 
+    } 
 }
 
 /* extra small devices */
 @media (min-width: 481px) and (max-width: 767px)
 {
-
+    /* carousel slides image captions */
+    .carousel-caption {   
+        position: absolute;
+        top: 10%;
+        text-align: left; 
+    } 
 }
 
 /* mobile */
