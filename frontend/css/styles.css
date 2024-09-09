@@ -10,7 +10,8 @@
     --font-style: "SUSE", sans-serif;
     --padding: 10px;
 
-    --box-shadow: 0 2px 5px rgba(0, 0, 0, 08);
+    --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+    --box-shadow2: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* colors */
@@ -72,6 +73,19 @@ html, body{
     overflow: hidden;
 }
 
+/* font awesome icons */
+.fa-solid{
+    color:rgb(13, 146, 117);
+}
+
+.aboutUs-text ul li i{
+    margin-right: 10px;
+}
+
+.aboutUs-text ul li{
+    margin-bottom: 12px;
+}
+
 @media (min-width: 992px)
 {
     /* header */
@@ -124,8 +138,8 @@ html, body{
 
     /* links focus */
     .navigation-links .navigation-list a:active{
-        border-bottom: 2px solid #28577a;
-        color: #28577a;
+        border-bottom: 2px solid #67fa93;
+        color: #5beece;
     }
 
     /* links hover */
@@ -220,28 +234,64 @@ html, body{
         border: 1px solid #3a707c;
     }
 
+    /* ABOUT SECTION */
+    .aboutUs-container{
+        /* background-color: var(--primary-color); */
+        padding: 120px 0 0 20px;
+    }
+    .aboutUs-content-container{
+        /* background-color: rgb(255, 250, 250); */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Creates two columns of equal width */
+        grid-template-rows: auto; /* Rows adjust based on content */
+        place-items: center;
+        margin: 0 auto;
+    }
+
+    #aboutUs-header{
+        padding-left: 30px;
+        color: rgb(13, 146, 117);
+    }
+    #aboutUs-subheader{
+        padding-left: 30px;
+    }
+
+    .aboutUs-container h4::after {
+        content: "";
+        width: 120px;
+        height: 1px;
+        display: inline-block;
+        background: rgb(221, 54, 54);
+        margin: 4px 10px;
+    }
+
+    .aboutUs-images{
+        width: 70%;
+        border-radius: 20px;
+    }
+
+    .aboutUs-text p{
+        padding: 10px 0 0 30px;
+
+    }
+
+    .aboutUs-images img{
+        height: 100%;
+        width: 100%;
+    }
+
 }
 
 /* small tablets */
 @media (min-width: 768px) and (max-width: 991px)
 {
-    /* carousel slides image captions */
-    .carousel-caption {   
-        position: absolute;
-        top: 10%;
-        text-align: left; 
-    } 
+    
 }
 
 /* extra small devices */
 @media (min-width: 481px) and (max-width: 767px)
 {
-    /* carousel slides image captions */
-    .carousel-caption {   
-        position: absolute;
-        top: 10%;
-        text-align: left; 
-    } 
+     
 }
 
 /* mobile */
