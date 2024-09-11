@@ -26,26 +26,26 @@
 </head>
 <body>
     <!-- header section for logo and navigation -->
-    <header class="header-section">
+    <header class="header-section" id="header">
         <!-- logo -->
-        <img src="frontend/images/weldcraftlogo.png" alt="logo">
+        <img src="frontend/images/weldcraft.png" alt="logo">
 
         <span onclick="openNav()" id="hamburgerIcon">&#9776;</span>
         <a href="javascript:void(0)" class="closebtn" id="closebtn" onclick="closeNav()">&#x2715;</a>
         <!-- navigation -->
         <nav class="navigation-links" id="myNav">
             <ul class="navigation-list">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- home section -->
-    <section class="main-container" id="home">
+    <section class="main-container" id="home" data-section="home">
         <!-- carousel slides -->
         <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
             <div class="carousel-indicators">
@@ -110,7 +110,7 @@
     </section>
 
     <!-- about section -->
-    <section class="aboutUs-container" id="about" style="height: 100vh;">
+    <section class="aboutUs-container" id="about" data-section="about" style="height: 100vh;">
         <h4 id="aboutUs-header">ABOUT WELDCRAFT</h4>
 
         <h3 id="aboutUs-subheader">Crafting Strength Through Precision Welding</h3>
@@ -140,8 +140,18 @@
         </div>
     </section>
 
+     <!-- projects section -->
+     <section class="projects-container" id="projects" data-section="projects" style="height: 100vh;">
+
+     </section>
+
+      <!-- services section -->
+      <section class="services" id="services" data-section="services" style="height: 100vh;">
+
+      </section>
+
     <!-- contact us section -->
-     <section class="contactUs-container" id="contact" style="height: 100vh;">
+     <section class="contactUs-container" id="contact" data-section="contact" style="height: 100vh;">
 
      </section>
 
