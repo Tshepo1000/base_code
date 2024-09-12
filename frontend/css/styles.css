@@ -96,31 +96,27 @@ html, body{
         padding: var(--padding);
         display: var(--display-flex);
         align-items: center;
+        justify-content: center;
         width: var(--full-width);
-        height: 120px;
+        height: 20vh;
         box-shadow: var(--box-shadow);
         transition: background-color 0.3s ease;
     }
 
-    header img{
-        height: 120px;
-        width: 370px;
-        margin-left: 4%;
+    #header img{
+        position: absolute;
+        left: 5%;
+        height: 130px;
+        width: 350px;
     }
 
     /* navigation style */
     .navigation-links{
-        display: var(--display-flex);
-        width: 40%;
-        justify-content: center;
-        align-items: center;
     }
 
     .navigation-list{
         display: var(--display-flex);
-        align-items: center;
-        justify-content: center;
-        gap: 50px;
+        gap: 60px;
     }
 
     /* links style */
@@ -129,6 +125,7 @@ html, body{
     }
 
     ul li a{
+        color: white;
         box-sizing: border-box;
         text-decoration: none;
         font-size: 17px;
@@ -179,7 +176,8 @@ html, body{
     /* main section */
     .main-container{
         width: var(--full-width);
-        height: 100%;
+        height: 100vh;
+        border: 2px solid black;
     }
 
     /* carousel slides */
@@ -206,7 +204,7 @@ html, body{
     /* carousel slides image captions */
     .carousel-caption {   
         position: absolute;
-        top: 20%;
+        top: 30%;
         text-align: left; 
     }  
     
@@ -258,22 +256,33 @@ html, body{
 
     /* ABOUT SECTION */
     .aboutUs-container{
-        padding: 130px 0 0 20px;
+        background: url(/frontend/images/welding-y50y1fzblu19d6zr.jpg);
+        height: 100vh;
+        padding: 170px 0 0 20px;
     }
     .aboutUs-content-container{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Creates two columns of equal width */
-        grid-template-rows: auto; /* Rows adjust based on content */
-        place-items: center;
-        margin: 0 auto;
+        margin-left: 6%;
+        width: 50%;
+        color: white;
+        line-height: 35px;
+        font-size: 1.2rem;
+    }
+
+    .aboutUs-headings{
+        margin-left: 6%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     #aboutUs-header{
-        padding-left: 30px;
         color: rgb(13, 146, 117);
+        margin-bottom: 2%;
     }
     #aboutUs-subheader{
-        padding-left: 30px;
+        color: white;
+        margin-bottom: 4%;
     }
 
     .aboutUs-container h4::after {
@@ -285,19 +294,8 @@ html, body{
         margin: 4px 10px;
     }
 
-    .aboutUs-images{
-        width: 70%;
-        border-radius: 20px;
-    }
-
-    .aboutUs-text p{
-        padding: 10px 0 0 30px;
-
-    }
-
-    .aboutUs-images img{
-        height: 100%;
-        width: 100%;
+    ul li i{
+        padding: 10px;
     }
 
 }
@@ -315,154 +313,4 @@ html, body{
 }
 
 /* mobile */
-@media (max-width: 480px)
-{
-    .header-section{
-        position: fixed;
-        display: flex;
-        width: 100%;
-        height: 16%;
-        z-index: 2;
-        box-shadow: var(--box-shadow);
-        background: var(--dark-gradient);        
-    }
-
-    /* logo */
-    .header-section img{
-        position: absolute;
-        top: 50%;
-        left: 30%;
-        transform: translate(-50%, -50%);
-        height: 90px;
-    }
-
-    .navigation-links{
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px); /* Safari support */
-        height: 100%;
-        width: 0;
-        position: var(--position-fixed);
-        z-index: 1;
-        top: 16%;
-        left: 0;
-        background: transparent;
-        overflow-x: hidden;
-        transition: 0.5s;
-        box-shadow: var(--box-shadow);
-    }
-
-    .navigation-list{
-        position: relative;
-        top: 0;
-        width: 100%;
-        /* text-align: center; */
-        margin-top: 30px;
-    }
-
-    .navigation-links .navigation-list a, .closebtn{
-        padding: 8px;
-        text-decoration: none;
-        font-size: 36px;
-        color: var(--primary-color);
-        display: block;
-        transition: 0.3s;
-    }
-
-    .navigation-links{
-        
-    }
-
-    ul li{
-        list-style-type: none;
-    }
-
-    .navigation-links .navigation-list a:hover, .navigation-links .navigation-list a:focus{
-        color: var(--links-color);
-    }
-
-    .closebtn{
-        font-size: 36px;
-    }
-
-    #hamburgerIcon{
-        font-size: 36px;
-       
-    }
-
-    /* hide small screen buttons */
-    #hamburgerIcon, .closebtn{
-        display: block;
-        position: absolute;
-        top: 50%;
-        right: 5%;
-        transform: translate(-50%, -50%);
-        color: var(--links-color);
-    }
-
-    .main-container{ 
-        /* margin-top: 30%; */
-        height: 100%;
-        overflow: hidden;
-    }
-
-    /* carousel slides */
-    .carousel{
-        height: 100%;
-    }
-
-    .carousel-inner, .carousel-item{
-        height: 100%;
-        z-index: 1;
-    }
-
-    .carousel-item img{
-        filter: brightness(50%);
-        object-fit: cover;
-        object-position: center;
-        height: 100%;
-    }
-
-     /* carousel slides image captions */
-    .carousel-caption{   
-        height: 70%;
-        text-align: center;
-    }  
-    
-    .carousel-caption h2{
-        font-weight: bolder;
-        font-size: 1.3rem;
-        margin-bottom: 15px;
-    }
-
-    .carousel-caption h3{
-        font-size: 1rem;
-        margin-bottom: 30px;
-    }
-
-    .carousel-caption p{
-        font-size: 0.8rem;
-        text-align: justify;
-    }
-
-    /* learn more/about us */
-    #about-button, #contact-button, #services-button{
-        /* button style */
-        background-color: #3a707c;
-        color: var(--primary-color);
-        font-family: var(--font-style);
-        margin-top: 40px;
-        height: 35px;
-        width: 100px;
-        border: none;
-        border-radius: 7px;
-        box-shadow: var(--box-shadow);
-        font-size: 13px;
-    }
-
-    #about-button:hover, #contact-button:hover, #services-button:hover{
-        background-color: transparent;
-        border: 1px solid #3a707c;
-    }
-
-}
 

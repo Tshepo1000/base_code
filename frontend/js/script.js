@@ -28,6 +28,13 @@ function scrollToContactUsSection(){
     });
 }
 
+// scrolls to services section
+function scrollToServicesSection(){
+    document.querySelector("#services").scrollIntoView({
+        behavior: 'smooth'
+    });
+}
+
 // Changes navbar background color based on section
 const sections = document.querySelectorAll("[data-section]");
 const navLinks = document.querySelectorAll(".nav-link");
@@ -46,9 +53,9 @@ document.addEventListener("scroll", function() {
                 navbar.style.backdropFilter = "blur(10px)";
                 navLinks.forEach(link => link.style.color = "white");
             } else {
-                navbar.style.backgroundColor = "rgba(255, 255, 255, 0.2)";
+                navbar.style.backgroundColor = "linear-gradient(rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%)";
                 navbar.style.backdropFilter = "blur(10px)";
-                navLinks.forEach(link => link.style.color = "black");
+                navLinks.forEach(link => link.style.color = "white");
             }
         }
     });
@@ -93,9 +100,9 @@ window.addEventListener('scroll', function() {
                 navbar.style.backdropFilter = "blur(10px)";
                 navLinks.forEach(link => link.style.color = "white");
             } else {
-                navbar.style.background = "rgba(255, 255, 255, 0.2)";
+                navbar.style.background = "linear-gradient(rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%)";
                 navbar.style.backdropFilter = "blur(10px)";
-                navLinks.forEach(link => link.style.color = "black");
+                navLinks.forEach(link => link.style.color = "white");
             }
         }
     });
