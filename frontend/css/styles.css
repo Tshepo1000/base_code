@@ -110,8 +110,8 @@ html, body{
     }
 
     /* navigation style */
-    .navigation-links{
-    }
+    /* .navigation-links{
+    } */
 
     .navigation-list{
         display: var(--display-flex);
@@ -149,9 +149,9 @@ html, body{
       }
 
     /* links focus */
-    .navigation-links .navigation-list a:active{
+    /* .navigation-links .navigation-list a:active{
         
-    }
+    } */
 
     ul li a.active{
         border-bottom: 2px solid #2f92dd;
