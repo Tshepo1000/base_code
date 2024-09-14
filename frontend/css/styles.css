@@ -3,10 +3,11 @@
     --display-flex: flex;
     --display-grid: grid;
 
-    --full-width: 100%;
+    --full-width: 100vw;
+    --full-height: 100vh;
     --position-fixed: fixed;
     
-    --font-size: 16px;
+    --font-size: 1rem;
     --font-style: "SUSE", sans-serif;
     --padding: 10px;
 
@@ -86,8 +87,6 @@ html, body{
     margin-bottom: 12px;
 }
 
-@media (min-width: 992px)
-{
     /* header */
     .header-section{
         z-index: 1000;
@@ -98,16 +97,16 @@ html, body{
         align-items: center;
         justify-content: center;
         width: var(--full-width);
-        height: 20vh;
+        height: 12vh;
         box-shadow: var(--box-shadow);
         transition: background-color 0.3s ease;
     }
 
     #header img{
         position: absolute;
-        left: 5%;
-        height: 130px;
-        width: 350px;
+        left: 3%;
+        height: 95%;
+        width: auto;
     }
 
     /* navigation style */
@@ -116,7 +115,7 @@ html, body{
 
     .navigation-list{
         display: var(--display-flex);
-        gap: 60px;
+        gap: 5em;
     }
 
     /* links style */
@@ -128,11 +127,11 @@ html, body{
         color: white;
         box-sizing: border-box;
         text-decoration: none;
-        font-size: 17px;
+        font-size: 1rem;
         font-weight: bold;
         transition: color 0.3s ease, border 0.3s ease;
         position: relative; /* Position relative for absolute border positioning */
-        padding: 5px 10px; 
+        padding: 1em 5em; 
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
     }
 
@@ -176,7 +175,7 @@ html, body{
     /* main section */
     .main-container{
         width: var(--full-width);
-        height: 100vh;
+        min-height: 80vh;
         border: 2px solid black;
     }
 
@@ -196,8 +195,8 @@ html, body{
     }
 
     .carousel-inner img{
-        width: var(--full-width);
-        height: var(--full-width);
+        width: 100%;
+        height: auto;
         filter: brightness(50%);
     }
 
@@ -240,13 +239,14 @@ html, body{
         background-color: #3a707c;
         color: var(--primary-color);
         font-family: var(--font-style);
-        height: 40px;
-        width: 150px;
+        height: auto;
+        width: 15vw;
         border: none;
         border-radius: 7px;
         align-items: center;
         box-shadow: var(--box-shadow);
         letter-spacing: 2px;
+        padding: 1rem 2rem;
     }
 
     #about-button:hover, #contact-button:hover, #services-button:hover{
@@ -257,15 +257,18 @@ html, body{
     /* ABOUT SECTION */
     .aboutUs-container{
         background: url(/frontend/images/welding-y50y1fzblu19d6zr.jpg);
-        height: 100vh;
-        padding: 170px 0 0 20px;
+        min-height: auto;
+        padding: 10% 5%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
     .aboutUs-content-container{
-        margin-left: 6%;
+        margin-left: 3%;
         width: 50%;
         color: white;
         line-height: 35px;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .aboutUs-headings{
@@ -292,13 +295,35 @@ html, body{
         display: inline-block;
         background: rgb(221, 54, 54);
         margin: 4px 10px;
+        animation: changeBackgroundColor 2s infinite;
     }
 
     ul li i{
-        padding: 10px;
+        padding: 0.8rem;
     }
 
-}
+    /*  team images */
+    .team-images{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        color: rgb(228, 215, 215);
+    }
+
+    .team-images h5{
+        font-style: italic;
+        letter-spacing: 1px;
+        /* font-weight: bolder; */
+        /* background-color: white; */
+    }
+
+    .team-images img{
+        width: 18vw;
+        border-radius: 50%;
+    }
+
 
 /* small tablets */
 @media (min-width: 768px) and (max-width: 991px)

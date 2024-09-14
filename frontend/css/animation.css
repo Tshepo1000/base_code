@@ -8,3 +8,31 @@
     animation-duration: var(--animate-duration);
     animation-delay: var(--animate-delay);
 }
+
+/* changes border color */
+@keyframes changeBorderColor {
+    0% {
+      border-color: rgb(255, 217, 0);
+    }
+    50% {
+      border-color: rgb(250, 193, 6);
+    }
+    100% {
+      border-color: rgb(217, 255, 0);
+    }
+  }
+
+  /* changes background color */
+  @keyframes changeBackgroundColor {
+    0% {
+        background: yellowgreen;
+    }
+
+    50% {
+        background: yellow;
+    }
+
+    100% {
+        background: lime;
+    }
+  }
