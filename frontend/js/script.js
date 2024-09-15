@@ -53,9 +53,9 @@ document.addEventListener("scroll", function() {
                 navbar.style.backdropFilter = "blur(10px)";
                 navLinks.forEach(link => link.style.color = "white");
             } else {
-                navbar.style.backgroundColor = "linear-gradient(rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%)";
-                navbar.style.backdropFilter = "blur(10px)";
-                navLinks.forEach(link => link.style.color = "white");
+                navbar.style.backgroundColor = "white";
+                // navbar.style.backdropFilter = "blur(10px)";
+                navLinks.forEach(link => link.style.color = "black");
             }
         }
     });
@@ -100,9 +100,9 @@ window.addEventListener('scroll', function() {
                 navbar.style.backdropFilter = "blur(10px)";
                 navLinks.forEach(link => link.style.color = "white");
             } else {
-                navbar.style.background = "linear-gradient(rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%)";
-                navbar.style.backdropFilter = "blur(10px)";
-                navLinks.forEach(link => link.style.color = "white");
+                navbar.style.background = "white";
+                // navbar.style.backdropFilter = "blur(10px)";
+                navLinks.forEach(link => link.style.color = "black");
             }
         }
     });

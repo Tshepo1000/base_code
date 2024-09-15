@@ -90,13 +90,16 @@ html, body{
 
     /* header */
     .header-section{
+        color: white;
         z-index: 1000;
         position: var(--position-fixed);
+        background:linear-gradient(rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%);
+        backdrop-filter: blur(10px);
         top: 0;
         padding: var(--padding);
         display: var(--display-flex);
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         width: var(--full-width);
         height: 12vh;
         box-shadow: var(--box-shadow);
@@ -111,12 +114,16 @@ html, body{
     }
 
     /* navigation style */
-    /* .navigation-links{
-    } */
+    .navigation-links{
+        position: absolute;
+        align-items: center;
+        left: 23%;
+    }
 
     .navigation-list{
         display: var(--display-flex);
-        gap: 5em;
+        gap: 2em;
+        align-items: center;
     }
 
     /* links style */
@@ -258,7 +265,8 @@ html, body{
     .aboutUs-container{
         position: relative;
         z-index: 1;
-        background: url(frontend/images/welding-y50y1fzblu19d6zr.jpg);
+        /* background: url(/frontend/images/welding-y50y1fzblu19d6zr.jpg); */
+        background-color: white;
         min-height: auto;
         padding: 6% 5%;
         display: flex;
@@ -266,30 +274,30 @@ html, body{
         align-items: center;
     }
 
-    .aboutUs-container::before {
+    /* .aboutUs-container::before {
         content: "";
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.7); /* Adjust the last value for the darkness level */
-        z-index: -1; /* Place the overlay behind the text */
-    }
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: -1;
+    } */
     .aboutUs-content-container{
         margin-left: 3%;
-        width: 50%;
-        color: white;
-        line-height: 35px;
-        font-size: 0.8rem;
+        width: 60%;
+        color: black;
+        /* line-height: 20px; */
+        font-size: 1rem;
     }
 
-    #aboutUs-header, #services-header{
+    #aboutUs-header, #services-header, #projects-header{
         color: rgb(13, 146, 117);
         margin-bottom: 1%;
     }
-    #aboutUs-subheader, #services-subheader{
-        color: white;
+    #aboutUs-subheader, #services-subheader, #projects-subheader{
+        color: black;
         margin-bottom: 2%;
     }
 
@@ -344,21 +352,22 @@ html, body{
         height: auto;
         position: relative;
         z-index: 1;
-        padding: 5% 10%;
-        background: url(frontend/images/pexels-photo-2554128.webp);
+        padding: 6% 10%;
+        /* background: url(/frontend/images/pexels-photo-2554128.webp); */
+        background-image: linear-gradient(to bottom right, rgb(245, 254, 255), rgb(255, 255, 255));
         background-size: cover;
     }
 
-    .services::before {
+    /* .services::before {
         content: "";
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.2); /* Adjust the last value for the darkness level */
-        z-index: -1; /* Place the overlay behind the text */
-    }
+        background-color: rgba(0, 0, 0, 0.2); 
+        z-index: -1; 
+    } */
 
     /* services grid layout */
     .our-services{
@@ -391,7 +400,6 @@ html, body{
     }
 
     .service p{
-        /* color: white; */
         position: absolute;
     }
 
@@ -430,6 +438,52 @@ html, body{
         font-size: 0.8rem;
         text-align: left;
         padding: 10px;
+    }
+
+    /* projects section */
+    .projects-container{
+        width: 100vw;
+        height: auto;
+        padding: 6% 10%;
+    }
+
+    .our-projects{
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        row-gap: 25px;
+        column-gap: 10px;
+    }
+
+    .project{
+        position: relative;
+        width: 95%;
+        height: 55vh;
+        padding-top: 10px;
+        background-color: white;
+        box-shadow: var(--box-shadow);
+    }
+
+    #project1{
+        background: url(/frontend/images/puertaondas__2_.webp);
+        background-size: cover;
+        background-position: center;
+    }
+
+    #project2{
+        background: url(/frontend/images/142832171_3754835714568429_2152311612956246663_n.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+
+    #project3{
+        background: url(/frontend/images/795D8B77-7A4F-48C5-AD18-68C8209CE70D.jpeg);
+        background-size: cover;
+        background-position: center;
     }
 
 
