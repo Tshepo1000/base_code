@@ -258,7 +258,7 @@ html, body{
     .aboutUs-container{
         position: relative;
         z-index: 1;
-        background: url(/frontend/images/welding-y50y1fzblu19d6zr.jpg);
+        background: url(frontend/images/welding-y50y1fzblu19d6zr.jpg);
         min-height: auto;
         padding: 6% 5%;
         display: flex;
@@ -345,7 +345,7 @@ html, body{
         position: relative;
         z-index: 1;
         padding: 5% 10%;
-        background: url(/frontend/images/pexels-photo-2554128.webp);
+        background: url(frontend/images/pexels-photo-2554128.webp);
         background-size: cover;
     }
 
