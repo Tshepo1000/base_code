@@ -22,6 +22,19 @@
     }
   }
 
+  @keyframes changeBorderColor1 {
+    0% {
+      border-color: rgb(0, 238, 255);
+    }
+    50% {
+      border-color: rgba(18, 14, 238, 0.877);
+    }
+    100% {
+      border-color: rgb(0, 153, 255);
+    }
+  }
+
+
   /* changes background color */
   @keyframes changeBackgroundColor {
     0% {

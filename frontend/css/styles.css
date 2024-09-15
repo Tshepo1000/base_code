@@ -57,6 +57,7 @@ body{
     font-family: var(--font-style);
     font-optical-sizing: auto;
     /* background-color: var(--primary-color); */
+    overflow-x: hidden;
 }
 
 /* subtle background colour */
@@ -176,7 +177,6 @@ html, body{
     .main-container{
         width: var(--full-width);
         min-height: 80vh;
-        border: 2px solid black;
     }
 
     /* carousel slides */
@@ -203,7 +203,7 @@ html, body{
     /* carousel slides image captions */
     .carousel-caption {   
         position: absolute;
-        top: 30%;
+        top: 20%;
         text-align: left; 
     }  
     
@@ -256,39 +256,54 @@ html, body{
 
     /* ABOUT SECTION */
     .aboutUs-container{
+        position: relative;
+        z-index: 1;
         background: url(/frontend/images/welding-y50y1fzblu19d6zr.jpg);
         min-height: auto;
-        padding: 10% 5%;
+        padding: 6% 5%;
         display: flex;
         flex-direction: row;
         align-items: center;
+    }
+
+    .aboutUs-container::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7); /* Adjust the last value for the darkness level */
+        z-index: -1; /* Place the overlay behind the text */
     }
     .aboutUs-content-container{
         margin-left: 3%;
         width: 50%;
         color: white;
         line-height: 35px;
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
-    .aboutUs-headings{
-        margin-left: 6%;
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    #aboutUs-header{
+    #aboutUs-header, #services-header{
         color: rgb(13, 146, 117);
-        margin-bottom: 2%;
+        margin-bottom: 1%;
     }
-    #aboutUs-subheader{
+    #aboutUs-subheader, #services-subheader{
         color: white;
-        margin-bottom: 4%;
+        margin-bottom: 2%;
     }
 
     .aboutUs-container h4::after {
+        content: "";
+        width: 120px;
+        height: 1px;
+        display: inline-block;
+        background: rgb(221, 54, 54);
+        margin: 4px 10px;
+        animation: changeBackgroundColor 2s infinite;
+    }
+
+    .services h4::after {
         content: "";
         width: 120px;
         height: 1px;
@@ -315,13 +330,106 @@ html, body{
     .team-images h5{
         font-style: italic;
         letter-spacing: 1px;
-        /* font-weight: bolder; */
-        /* background-color: white; */
+        font-size: 0.8rem;
     }
 
     .team-images img{
         width: 18vw;
         border-radius: 50%;
+    }
+
+    /* services section */
+    .services{
+        width: 100vw;
+        height: auto;
+        position: relative;
+        z-index: 1;
+        padding: 5% 10%;
+        background: url(/frontend/images/pexels-photo-2554128.webp);
+        background-size: cover;
+    }
+
+    .services::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.2); /* Adjust the last value for the darkness level */
+        z-index: -1; /* Place the overlay behind the text */
+    }
+
+    /* services grid layout */
+    .our-services{
+        margin: 0 auto;
+        width: 80%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        row-gap: 25px;
+        column-gap: 0%;
+        animation: changeBorderColor 2s infinite;
+    }
+
+    .service{
+        position: relative;
+        width: 95%;
+        height: 33vh;
+        padding-top: 10px;
+        /* background: linear-gradient(rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.9) 50%); */
+        background-color: white;
+        box-shadow: var(--box-shadow);
+        border-radius: 4%;
+    }
+
+    .service h6{
+        color: #2f92dd;
+        padding: 10px;
+    }
+
+    .service p{
+        /* color: white; */
+        position: absolute;
+    }
+
+    .btn_and_icon{
+        padding: 10px;
+        position: absolute;
+        top: 70%;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .btn_and_icon img{
+        width: 40px;
+        height: auto;
+        
+    }
+
+    .btn_and_icon button{
+       width: 80px;
+       height: 30px;
+       background-color: transparent;
+       border-radius: 8px;
+       font-size: 0.7rem;
+       border: 2px solid rgb(44, 144, 184);
+       animation: changeBorderColor1 4s infinite;
+    }
+
+    /* button mouseover */
+    .btn_and_icon button:hover{
+        background-color: rgb(0, 153, 255);
+        border: none;
+    }
+
+    .service p{
+        font-size: 0.8rem;
+        text-align: left;
+        padding: 10px;
     }
 
 
