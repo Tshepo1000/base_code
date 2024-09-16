@@ -99,7 +99,7 @@ html, body{
         padding: var(--padding);
         display: var(--display-flex);
         align-items: center;
-        justify-content: flex-start;
+        justify-content: center;
         width: var(--full-width);
         height: 12vh;
         box-shadow: var(--box-shadow);
@@ -108,21 +108,20 @@ html, body{
 
     #header img{
         position: absolute;
-        left: 3%;
+        left: 6%;
         height: 95%;
         width: auto;
     }
 
     /* navigation style */
     .navigation-links{
-        position: absolute;
+        /* position: absolute; */
         align-items: center;
-        left: 23%;
     }
 
     .navigation-list{
         display: var(--display-flex);
-        gap: 2em;
+        gap: 3em;
         align-items: center;
     }
 
@@ -210,7 +209,7 @@ html, body{
     /* carousel slides image captions */
     .carousel-caption {   
         position: absolute;
-        top: 20%;
+        top: 30%;
         text-align: left; 
     }  
     
@@ -268,7 +267,7 @@ html, body{
         /* background: url(/frontend/images/welding-y50y1fzblu19d6zr.jpg); */
         background-color: white;
         min-height: auto;
-        padding: 6% 5%;
+        padding: 8% 5%;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -289,12 +288,12 @@ html, body{
         width: 60%;
         color: black;
         /* line-height: 20px; */
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     #aboutUs-header, #services-header, #projects-header{
         color: rgb(13, 146, 117);
-        margin-bottom: 1%;
+        margin-bottom: 2%;
     }
     #aboutUs-subheader, #services-subheader, #projects-subheader{
         color: black;
@@ -352,7 +351,7 @@ html, body{
         height: auto;
         position: relative;
         z-index: 1;
-        padding: 6% 10%;
+        padding: 7% 10%;
         /* background: url(/frontend/images/pexels-photo-2554128.webp); */
         background-image: linear-gradient(to bottom right, rgb(245, 254, 255), rgb(255, 255, 255));
         background-size: cover;
@@ -372,6 +371,7 @@ html, body{
     /* services grid layout */
     .our-services{
         margin: 0 auto;
+        padding: 15px;
         width: 80%;
         height: 100%;
         display: grid;
@@ -387,7 +387,7 @@ html, body{
         position: relative;
         width: 95%;
         height: 33vh;
-        padding-top: 10px;
+        padding-top: 15px;
         /* background: linear-gradient(rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.9) 50%); */
         background-color: white;
         box-shadow: var(--box-shadow);
@@ -486,6 +486,9 @@ html, body{
         background-position: center;
     }
 
+
+
+/* laptop screens */
 
 /* small tablets */
 @media (min-width: 768px) and (max-width: 991px)
