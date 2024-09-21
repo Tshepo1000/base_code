@@ -56,7 +56,6 @@ html{
 body{
     font-family: var(--font-style);
     font-optical-sizing: auto;
-    /* background-color: var(--primary-color); */
     overflow-x: hidden;
 }
 
@@ -183,12 +182,12 @@ ul li a{
     /* main section */
     .main-container{
         width: var(--full-width);
-        min-height: 80vh;
+        height: auto;
     }
 
     /* carousel slides */
     .carousel{
-        width: var(--full-width);
+        width: 100%;
         height: 100%;
     }
 
@@ -203,15 +202,20 @@ ul li a{
 
     .carousel-inner img{
         width: 100%;
-        height: auto;
+        object-fit: cover;
         filter: brightness(50%);
     }
 
     /* carousel slides image captions */
     .carousel-caption {   
-        position: absolute;
-        top: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+        top: 0;
         text-align: left; 
+        padding: 0 5%;
     }  
     
     .carousel-caption h2, h3, p{
@@ -235,44 +239,43 @@ ul li a{
         padding-top: 30px;
     }
 
-    /* learn more/about us */
-    #about-button, #contact-button, #services-button{
-        margin-top: 30px;
-        display: flex;
-        align-items: flex-start;
-        justify-content: center;
+/* learn more/about us */
+#about-button, #contact-button, #services-button{
+    position: relative;
+    margin: 20px 0;
+    display: inline-block;
 
-        /* button style */
-        background-color: #3a707c;
-        color: var(--primary-color);
-        font-family: var(--font-style);
-        height: auto;
-        width: 15vw;
-        border: none;
-        border-radius: 7px;
-        align-items: center;
-        box-shadow: var(--box-shadow);
-        letter-spacing: 2px;
-        padding: 1rem 2rem;
-    }
+    /* button style */
+    background-color: #3a707c;
+    color: var(--primary-color);
+    font-family: var(--font-style);
+    height: auto;
+    width: 15vw;
+    border: none;
+    border-radius: 7px;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    letter-spacing: 2px;
+    padding: 1rem 2rem;
+}
 
-    #about-button:hover, #contact-button:hover, #services-button:hover{
-        background-color: transparent;
-        border: 1px solid #3a707c;
-    }
 
-    /* ABOUT SECTION */
-    .aboutUs-container{
-        position: relative;
-        z-index: 1;
-        /* background: url(/frontend/images/welding-y50y1fzblu19d6zr.jpg); */
-        background-color: white;
-        min-height: auto;
-        padding: 8% 5%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
+#about-button:hover, #contact-button:hover, #services-button:hover{
+    background-color: transparent;
+    border: 1px solid #3a707c;
+}
+
+/* ABOUT SECTION */
+.aboutUs-container{
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    min-height: auto;
+    padding: 8% 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
     .aboutUs-content-container{
         margin-left: 3%;
@@ -457,5 +460,3 @@ ul li a{
         background-size: cover;
         background-position: center;
     }
-
-
