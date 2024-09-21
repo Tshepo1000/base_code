@@ -66,7 +66,7 @@ html, body{
 }
 
 /* hide small screen buttons */
-#closebtn, #hamburgerIcon{
+#close-icon, #menu-icon{
     display: none;
 }  
 
@@ -210,7 +210,7 @@ ul li a{
     /* carousel slides image captions */
     .carousel-caption {   
         position: absolute;
-        top: 20%;
+        top: 30%;
         text-align: left; 
     }  
     
@@ -268,33 +268,23 @@ ul li a{
         /* background: url(/frontend/images/welding-y50y1fzblu19d6zr.jpg); */
         background-color: white;
         min-height: auto;
-        padding: 6% 5%;
+        padding: 8% 5%;
         display: flex;
         flex-direction: row;
         align-items: center;
     }
 
-    /* .aboutUs-container::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.7);
-        z-index: -1;
-    } */
     .aboutUs-content-container{
         margin-left: 3%;
         width: 60%;
         color: black;
         /* line-height: 20px; */
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     #aboutUs-header, #services-header, #projects-header{
         color: rgb(13, 146, 117);
-        margin-bottom: 1%;
+        margin-bottom: 2%;
     }
     #aboutUs-subheader, #services-subheader, #projects-subheader{
         color: black;
