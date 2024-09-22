@@ -171,8 +171,7 @@ ul li a{
 
     ul li a:hover::after {
         transform: scaleX(1); /* Show border on hover */
-      }
-  
+    }
 
     /* center container */
     .container{

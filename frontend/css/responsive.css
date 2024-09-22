@@ -1,8 +1,115 @@
-/* small tablets */
-@media (min-width: 768px) and (max-width: 991px)
+/* mobile */
+@media (max-width: 480px)
 {
+    .header-section{
+        position: fixed;
+    }
+    /* navigation style */
+    .navigation-links{
+        position: absolute;
+        align-items: flex-start;
+        background-color: white;
+        top: 100%;
+        height: 100vh;
+        width: 100%;
+        display: none;
+    }
+
+    .navigation-list{
+       flex-direction: column;
+       align-items: flex-start;
+       padding: 30px;
+    }
+
+    .navigation-links .navigation-list li a{
+        color: black;
+        
+    }
+
+    .main-container{
+        height: 100vh;
+    }
+
+    .carousel-caption{
+        padding: 0;
+        align-items: center;
+    }
+
+    #carouselExampleRide img{
+        object-fit: cover;
+        height: 100vh;
+    }
+
+    .carousel-caption h2{
+        margin-top: 5%;
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption h3{
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .carousel-caption p{
+        width: 300px;
+        font-size: 1em;
+        padding-top: 30px;
+        text-align: center;
+    }
+
+    /* learn more/about us */
+#about-button, #contact-button, #services-button{
+    margin: 10px 0;
+
+    /* button style */
+    width: 50vw;
+    letter-spacing: 1px;
+    padding: 0.5rem 1rem;
+    font-size: small;
+}
+
+/* about section */
+.aboutUs-container{
+    flex-direction: column;
+    padding: 4% 2%;
+    align-items: flex-start;
+}
+
+.aboutUs-content-container{
+    margin-left: 0;
+    width: 100%;
+    padding: 5%;
+    font-size: 1rem;
+}
+
+.aboutUs-content-container p{
+    text-align: center;
+}
+
+#aboutUs-header{
+    font-size: 1.2rem;
+}
+
+#aboutUs-subheader{
+    font-size: 1rem;
+}
+
+ul li i{
+    margin-left: -12%;
+    padding: 5px;
     
 }
+
+/* services section */
+.our-services{
+    grid-template-columns: repeat(1, 1fr);
+}
+
+/* projects section */
+.our-projects{
+    grid-template-columns: repeat(1, 1fr);
+}
+
 
 /* extra small devices */
 @media (min-width: 481px) and (max-width: 767px)
@@ -10,4 +117,11 @@
      
 }
 
-/* mobile */
+/* small tablets */
+@media (min-width: 768px) and (max-width: 991px)
+{
+    
+}
+
+
+

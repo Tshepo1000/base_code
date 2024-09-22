@@ -1,53 +1,6 @@
-const menuIcon = document.getElementById("menu-icon");
 const nav = document.getElementById("myNav");
 const sections = document.querySelectorAll("[data-section]");
 const navLinks = document.querySelectorAll('.nav-link');
-const closeIcon = document.getElementById('close-icon');
-
-// blurs screen when menu icon is clicked
-menuIcon.addEventListener('click', () => {
-    // Toggle the visibility of the navigation menu
-    nav.classList.toggle('active');
-
-    // Toggle the blur effect on each section
-    sections.forEach(section => {
-        section.classList.toggle('blur');
-    });
-});
-
-// Function to open the navigation menu
-function openNav() {
-    closeIcon.style.display = "block";
-    menuIcon.style.display = "none";
-    document.body.classList.add("no-scroll");  // Add no-scroll class
-    nav.classList.add('active'); // Show the nav menu
-    sections.forEach(section => {
-        section.classList.add('blur'); // Apply blur to sections
-    });
-}
-
-// Function to close the navigation menu
-function closeNav() {
-    closeIcon.style.display = "none";
-    menuIcon.style.display = "block";
-    document.body.classList.remove("no-scroll");  // Remove no-scroll class
-    nav.classList.remove('active'); // Hide the nav menu
-    sections.forEach(section => {
-        section.classList.remove('blur'); // Remove blur from sections
-    });
-}
-
-// Event listeners
-menuIcon.addEventListener('click', openNav); // Open menu when menu icon is clicked
-closeIcon.addEventListener('click', closeNav); // Close menu when close icon is clicked
-
-// Close menu when a navigation link is clicked
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        closeNav();
-    });
-});
-
 
 // scroll to sections
 

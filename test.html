@@ -6,46 +6,116 @@
     <title>Document</title>
 
     <style>
-        body{
-            background-color: red;
-        }
-    
-        @media (max-width: 480px){
-            .container{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                width: 100%;
-                height: 100%;
-                transform: translate(-50%, -50%);
-                background-color: white;
-                border: 2px solid white;
-            }  
-        }
-        </style>
+       *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+
+       body{
+        min-height: 100vh;
+       }
+
+       nav{
+        background-color: white;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+       }
+
+       nav ul{
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+       }
+
+       nav li{
+        height: 50px;
+       }
+
+       nav a{
+        height: 100%;
+        padding: 0 30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: black;
+       }
+
+       nav a:hover{
+        background-color: #f0f0f0;
+       }
+
+       .sidebar{
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        z-index: 999;
+        background-color: white;
+        backdrop-filter: blur(10px);
+        box-shadow: -10px 0 10px rgba(255, 255, 255, 0.2);
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+       }
+
+       .sidebar li{
+        width: 100%;
+       }
+
+       .sidebar a{
+        width: 100%;
+       }
+
+       .menu-button{
+        display: none;
+       }
+
+       @media (max-width: 800px){
+           .hideOnMoblie{
+                display: none;
+           } 
+
+           .menu-button{
+            display: block;
+           }
+       }
+
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Welcome to [Your Company Name]</h2> 
-        <h3>Where sparks fly and strong bonds are forged!</h3> 
-        <p>
-            Whether you need precision welding or custom metalwork, we’re here to 
-            <br>
-            bring your visions to life with expert craftsmanship and unmatched quality. 
-            <br>
-            From industrial projects to artistic creations, our skilled team is dedicated to delivering 
-            <br>
-            results that stand the test of time. With [X] years of experience and a commitment 
-            <br>
-            to excellence, we turn metal into masterpieces. 
-            Let's build something incredible 
-            <br>
-            together your ideas, our expertise, limitless possibilities!"
-            </p>
-    </div> 
+   <nav>
+    <ul class="sidebar">
+        <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <ul>
+        <li class="hideOnMoblie"><a href="#">Home</a></li>
+        <li class="hideOnMoblie"><a href="#">About</a></li>
+        <li class="hideOnMoblie"><a href="#">Services</a></li>
+        <li class="hideOnMoblie"><a href="#">Projects</a></li>
+        <li class="hideOnMoblie"><a href="#">Contact</a></li>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+    </ul>
+   </nav>
+
+   <script>
+    function showSidebar(){
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = "flex";
+    }
+
+    function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.style.display = "none";
+    }
+   </script>
 </body>
 </html>
