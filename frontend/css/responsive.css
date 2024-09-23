@@ -86,12 +86,13 @@
     text-align: center;
 }
 
-#aboutUs-header{
+#aboutUs-header, #services-header{
     font-size: 1.2rem;
 }
 
-#aboutUs-subheader{
+#aboutUs-subheader, #services-subheader{
     font-size: 1rem;
+    margin-bottom: 5%;
 }
 
 ul li i{
