@@ -1,12 +1,22 @@
 /* mobile */
-@media (max-width: 480px)
+@media (max-width: 600px)
 {
     .header-section{
         position: fixed;
     }
+
+    .menu-button{
+        display: block;
+    }
+
+    .close-button{
+        display: none;
+    }
+
     /* navigation style */
     .navigation-links{
         position: absolute;
+        left: 0;
         align-items: flex-start;
         background-color: white;
         top: 100%;

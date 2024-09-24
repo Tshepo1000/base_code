@@ -2,6 +2,27 @@ const nav = document.getElementById("myNav");
 const sections = document.querySelectorAll("[data-section]");
 const navLinks = document.querySelectorAll('.nav-link');
 
+// menu
+const closeBtn = document.querySelector('.close-button');
+const menuBtn = document.querySelector('.menu-button');
+
+
+function showMenubar(){
+    const menu = document.querySelector('.navigation-links');
+    menu.style.display = "flex";
+    menuBtn.style.display = 'none';
+    closeBtn.style.display = 'block';
+    
+
+}
+
+function hideMenubar(){
+    const menu = document.querySelector('.navigation-links');
+    menu.style.display = "none";
+    closeBtn.style.display = 'none';
+    menuBtn.style.display = 'block';
+}
+
 // scroll to sections
 
 // scrolls to about section on click

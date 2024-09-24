@@ -105,6 +105,10 @@ html, body{
     transition: background-color 0.3s ease;
 }
 
+.menu-button, .close-button{
+    display: none;
+}
+
 /* logo */
 #header img{
     height: auto;
