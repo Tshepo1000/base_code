@@ -447,19 +447,19 @@ ul li a{
     }
 
     #project1{
-        background: url(/frontend/images/puertaondas__2_.webp);
+        background: url(frontend/images/puertaondas__2_.webp);
         background-size: cover;
         background-position: center;
     }
 
     #project2{
-        background: url(/frontend/images/142832171_3754835714568429_2152311612956246663_n.jpg);
+        background: url(frontend/images/142832171_3754835714568429_2152311612956246663_n.jpg);
         background-size: cover;
         background-position: center;
     }
 
     #project3{
-        background: url(/frontend/images/795D8B77-7A4F-48C5-AD18-68C8209CE70D.jpeg);
+        background: url(frontend/images/795D8B77-7A4F-48C5-AD18-68C8209CE70D.jpeg);
         background-size: cover;
         background-position: center;
     }
