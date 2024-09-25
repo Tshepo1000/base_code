@@ -113,7 +113,8 @@
 }
 
 .history-right img, .mission-left img {
-    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-top: 20px;
     width: 100%;
     height: 100%;
 }
@@ -141,7 +142,7 @@
 .our-projects{
     grid-template-columns: repeat(1, 1fr);
 }
-
+}
 
 /* extra small devices */
 @media (min-width: 481px) and (max-width: 767px)
