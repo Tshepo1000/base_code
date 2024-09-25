@@ -12,8 +12,6 @@ function showMenubar(){
     menu.style.display = "flex";
     menuBtn.style.display = 'none';
     closeBtn.style.display = 'block';
-    
-
 }
 
 function hideMenubar(){
@@ -22,6 +20,20 @@ function hideMenubar(){
     closeBtn.style.display = 'none';
     menuBtn.style.display = 'block';
 }
+
+function toggleMenu() {
+    document.body.classList.toggle('no-scroll'); // Toggle scrolling
+
+    buttons.forEach(button => {
+        button.disabled = !button.disabled; // Disable or enable buttons
+    });
+}
+
+// Add event listeners to open/close menu
+menuBtn.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default anchor behavior
+    toggleMenu(); // Call the function to toggle the menu
+});
 
 // scroll to sections
 
