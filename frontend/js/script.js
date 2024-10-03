@@ -12,6 +12,7 @@ function showMenubar(){
     menu.style.display = "flex";
     menuBtn.style.display = 'none';
     closeBtn.style.display = 'block';
+    document.body.classList.toggle('no-scroll');
 }
 
 function hideMenubar(){
@@ -31,8 +32,8 @@ function toggleMenu() {
 
 // Add event listeners to open/close menu
 menuBtn.addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent default anchor behavior
-    toggleMenu(); // Call the function to toggle the menu
+    event.preventDefault(); 
+    toggleMenu(); 
 });
 
 // scroll to sections
