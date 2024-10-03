@@ -130,3 +130,90 @@ window.addEventListener('scroll', function() {
 
 // Set the active link on initial load
 document.addEventListener('DOMContentLoaded', setActiveLink);
+
+// hire us section
+// buttons
+const customGates = document.getElementById('custom-gates');
+const securityBuglarBars = document.getElementById('security-buglar-bars');
+const gateMaintenance = document.getElementById('gate-maintenance');
+const gateRefurb = document.getElementById('gate-refurbishments');
+const buglarBarsRefurb = document.getElementById('security-buglar-bars-refurb');
+const mobileWelding = document.getElementById('mobile-welding');
+
+// form
+const form = document.getElementById('form');
+const overlay = document.getElementById('overlay1');
+const servicesSection = document.querySelector('.services');
+
+// blurs sections
+function blurSections() {
+    // Get all sections by their 'data-section' attribute
+    const sections = document.querySelectorAll('section');
+
+    // Loop through each section and apply the blur effect
+    sections.forEach(section => {
+        section.style.filter = 'blur(5px)';
+    });
+
+    document.body.classList.toggle('no-scroll');
+}
+
+// unblurs the sections
+function removeBlur() {
+    const sections = document.querySelectorAll('section');
+
+    sections.forEach(section => {
+        section.style.filter = 'none';  
+    });
+
+    document.body.classList.remove('no-scroll');
+}
+
+
+securityBuglarBars.addEventListener('click', function(){
+    form.style.display = "block";
+    document.getElementById('mysubject').value = "Security Buglar Bars Enquiry";
+    overlay.classList.add('show-overlay');
+    
+})
+
+gateMaintenance.addEventListener('click', function(){
+    form.style.display = "block";
+    document.getElementById('mysubject').value = "Gate Maintenance Enquiry";
+    overlay.classList.add('show-overlay');
+})
+
+customGates.addEventListener('click', function(){
+    form.style.display = "block";
+    document.getElementById('mysubject').value = "Custom Gate Enquiry";
+    overlay.classList.add('show-overlay');
+})
+
+gateRefurb.addEventListener('click', function(){
+    form.style.display = "block";
+    document.getElementById('mysubject').value = "Gate Refurbishments Enquiry";
+    overlay.classList.add('show-overlay');
+})
+
+buglarBarsRefurb.addEventListener('click', function(){
+    form.style.display = "block";
+    document.getElementById('mysubject').value = "Buglar Bars Refurbishments Enquiry";
+    overlay.classList.add('show-overlay');
+})
+
+mobileWelding.addEventListener('click', function(){
+    form.style.display = "block";
+    document.getElementById('mysubject').value = "Mobile Welding Enquiry";
+    overlay.classList.add('show-overlay');
+})
+
+const closebutton = document.getElementById('closeBtn');
+
+closebutton.addEventListener('click', function(){
+    form.style.display = "none";
+    form.classList.remove('show-form');
+    overlay.classList.remove('show-overlay');
+})
+
+
+

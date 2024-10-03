@@ -152,8 +152,11 @@
     </div>
 </section>
 
+<div class="overlay1" id="overlay1"></div>
     <!-- services section -->
     <section class="services" id="services" data-section="services">
+       
+
         <div class="services-content-container">
             <h4 id="services-header">Our Services</h4>
             <h3 id="services-subheader">What we offer to our customers</h3>
@@ -164,7 +167,7 @@
                     <p>Enhance the security and curb appeal of your property with our expertly crafted custom gates. Designed to meet your specific needs, our gates combine strength, style, and durability for both residential and commercial properties.</p>
                     <div class="btn_and_icon">
                         <img src="frontend/images/welding-mask.png" alt="">
-                        <button>Hire Us</button>
+                        <button id="custom-gates" onclick="blurSections()">Hire Us</button>
                     </div>
                 </div>
 
@@ -175,7 +178,7 @@
                     </p>
                     <div class="btn_and_icon">
                         <img src="frontend/images/welding.png" alt="">
-                        <button>Hire Us</button>
+                        <button id="security-buglar-bars" onclick="blurSections()">Hire Us</button>
                     </div>
                 </div>
 
@@ -186,7 +189,7 @@
                     </p>
                     <div class="btn_and_icon">
                         <img src="frontend/images/welder.png" alt="">
-                        <button>Hire Us</button>
+                        <button id="gate-maintenance" onclick="blurSections()">Hire Us</button>
                     </div>
                 </div>
 
@@ -197,7 +200,7 @@
                     </p>
                     <div class="btn_and_icon">
                         <img src="frontend/images/construction-and-tools.png" alt="">
-                        <button>Hire Us</button>
+                        <button id="gate-refurbishments" onclick="blurSections()">Hire Us</button>
                     </div>
                 </div>
 
@@ -207,7 +210,7 @@
                         Revitalize your existing burglar bars with our professional refurbishment services. We restore, repaint, and reinforce worn or damaged bars to ensure they maintain their strength and appearance, giving you lasting protection without the need for a complete replacement.                    </p>
                     <div class="btn_and_icon">
                         <img src="frontend/images/power-supply.png" alt="">
-                        <button>Hire Us</button>
+                        <button id="security-buglar-bars-refurb" onclick="blurSections()">Hire Us</button>
                     </div>
                 </div>
                 
@@ -218,7 +221,7 @@
                     </p>
                     <div class="btn_and_icon">
                         <img src="frontend/images/welding (1).png" alt="">
-                        <button>Hire Us</button>
+                        <button id="mobile-welding" onclick="blurSections()">Hire Us</button>
                     </div>
                 </div>
             </div>
@@ -256,18 +259,43 @@
         </div>
 
         <form action="" method="POST">
-          <input type="text" name="name" id="name" placeholder="NAME">
+          <input type="text" name="name" id="name" placeholder="NAME" required>
 
-          <input type="text" name="surname" id="surname" placeholder="SURNAME">
+          <input type="text" name="surname" id="surname" placeholder="SURNAME" required>
 
-          <input type="email" name="email" id="email" placeholder="EMAIL">
+          <input type="email" name="email" id="email" placeholder="EMAIL" required>
 
-          <input type="text" name="subject" id="subject" placeholder="SUBJECT">
+          <input type="text" name="subject" id="subject" placeholder="SUBJECT" required>
 
-          <textarea name="message" id="message" cols="30" rows="10" placeholder="MESSAGE"></textarea>
+          <textarea name="message" id="message" placeholder="MESSAGE" required></textarea>
         </form>
+        <button id="form-submit-btn">Send Message</button>
       </div>
     </section>
+
+     <!-- hire us section -->
+     <div class="hire-us-form" id="form">
+        <div class="hire-us-content">
+          <h4 id="hire-us-header">Contact US</h4>
+          <h3 id="hire-us-subheader">Get in touch with us</h3>
+
+          <li class="close-button" onclick="removeBlur()" id="closeBtn" style="list-style-type: none; text-decoration: none; display: block; position: absolute; right: 5%; top: 5%;"><a><svg xmlns="http://www.w3.org/2000/svg" style="background-color: transparent; cursor: pointer;" height="36px" viewBox="0 -960 960 960" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        </div>
+
+        <form action="" method="POST">
+          <input type="text" name="name" id="name" placeholder="NAME" required>
+
+          <input type="text" name="surname" id="surname" placeholder="SURNAME" required>
+
+          <input type="email" name="email" id="email" placeholder="EMAIL" required>
+
+          <input type="text" name="subject" id="mysubject" placeholder="SUBJECT" required>
+
+          <textarea name="message" id="message" placeholder="MESSAGE" required></textarea>
+        </form>
+
+        <button id="form-submit-btn">Send Message</button>
+      </div>
 
     <script src="frontend/js/script.js">
     </script>
