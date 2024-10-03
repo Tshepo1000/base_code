@@ -67,6 +67,14 @@
         text-align: center;
     }
 
+    section h3{
+        font-size: 1rem;
+    }
+
+    section h4{
+        font-size: 1rem;
+    }
+
     /* learn more/about us */
     #about-button, #contact-button, #services-button{
     margin: 10px 0;
@@ -136,6 +144,15 @@
     /* services section */
     .our-services{
         grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+    }
+
+    .service h6{
+        font-size: 1rem;
+    }
+
+    .service p{
+        font-size: 0.7em;
     }
 
     /* projects section */
@@ -158,12 +175,26 @@
     }
 
     .hire-us-form{
-        width: 70%;
+        width: 95%;
+        height: auto;
+    }
+
+    form input, form textarea{
+        font-size: 12px;
+    }
+
+    form h4{
+        font-size: 1rem;
+    }
+
+    form h3{
+        font-size: 0.8rem;
     }
 
     #form-submit-btn{
         width: 50%;
         margin-left: 25%;
+        font-size: 10px;
     }
 
     .our-projects span {
