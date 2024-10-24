@@ -9,32 +9,19 @@ const menuBtn = document.querySelector('.menu-button');
 
 function showMenubar(){
     const menu = document.querySelector('.navigation-links');
+    document.body.classList.toggle('no-scroll');
     menu.style.display = "flex";
     menuBtn.style.display = 'none';
     closeBtn.style.display = 'block';
-    document.body.classList.toggle('no-scroll');
 }
 
 function hideMenubar(){
     const menu = document.querySelector('.navigation-links');
+    document.body.classList.remove('no-scroll');
     menu.style.display = "none";
     closeBtn.style.display = 'none';
     menuBtn.style.display = 'block';
 }
-
-function toggleMenu() {
-    document.body.classList.toggle('no-scroll'); // Toggle scrolling
-
-    buttons.forEach(button => {
-        button.disabled = !button.disabled; // Disable or enable buttons
-    });
-}
-
-// Add event listeners to open/close menu
-menuBtn.addEventListener('click', function(event) {
-    event.preventDefault(); 
-    toggleMenu(); 
-});
 
 // scroll to sections
 

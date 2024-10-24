@@ -175,9 +175,9 @@
     }
 
     .hire-us-form{
-        top: 60%;
+        top: 50%;
         width: 90%;
-        height: auto;
+        height: 60vh;
     }
 
     form input, form textarea{
@@ -197,7 +197,7 @@
     }
 
     #form-submit-btn{
-        width: 50%;
+        width: 40vw;
         font-size: 10px;
     }
 
