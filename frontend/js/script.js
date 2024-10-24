@@ -82,6 +82,37 @@ document.addEventListener("scroll", function() {
     });
 });
 
+
+
+// changes the color of the links according to screen size
+const smallScreen = window.matchMedia("(max-width: 600px)");
+smallScreen.addListener(handleSmallScreen);
+
+// Function to execute when screen width is below 600px
+function handleSmallScreen(e) {
+    if (e.matches) {
+        document.addEventListener("scroll", function() {
+            const scrollPosition = window.scrollY + window.innerHeight / 2;
+            const menu_links = document.getElementById("myNav");
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+        
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    if (section.getAttribute("data-section") === "home") {
+                        menu_links.style.backgroundColor = "black";
+                    } else {
+                        menu_links.style.backgroundColor = "white";
+                    }
+                }
+            });
+        });
+    }
+}
+
+handleSmallScreen(smallScreen);
+
 // Function to set the active link based on scroll position
 function setActiveLink() {
     let currentSection = '';
