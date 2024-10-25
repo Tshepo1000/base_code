@@ -258,7 +258,7 @@
           <h3 id="contacts-subheader">Get in touch with us</h3>
         </div>
 
-        <form action="" method="POST">
+        <form id="emailForm">
           <input type="text" name="name" id="name" placeholder="NAME" required>
 
           <input type="text" name="surname" id="surname" placeholder="SURNAME" required>
@@ -268,6 +268,8 @@
           <input type="text" name="subject" id="subject" placeholder="SUBJECT" required>
 
           <textarea name="message" id="message" placeholder="MESSAGE" required></textarea>
+          <div class="error" id="errorMessage"></div>
+          <div class="success" id="successMessage"></div>
         </form>
         <button id="form-submit-btn">Send Message</button>
       </div>
@@ -299,5 +301,9 @@
 
     <script src="frontend/js/script.js">
     </script>
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="/frontend/js/auth.js"></script>
+
 </body>
 </html>
