@@ -227,11 +227,15 @@ mobileWelding.addEventListener('click', function(){
 })
 
 const closebutton = document.getElementById('closeBtn');
+const errorMessage = document.getElementById("errorMessage-2");
+const successMessage = document.getElementById("successMessage-2");
 
 closebutton.addEventListener('click', function(){
     form.style.display = "none";
     form.classList.remove('show-form');
     overlay.classList.remove('show-overlay');
+    errorMessage.innerHTML = "";
+    successMessage.innerHTML = "";
 })
 
 
