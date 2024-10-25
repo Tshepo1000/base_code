@@ -273,16 +273,16 @@
         </div>
 
         <form id="emailForm">
-          <input type="text" name="name" id="name" placeholder="NAME" required>
+          <input type="text" name="name" id="name" placeholder="FULL NAME" required>
 
-          <input type="text" name="surname" id="surname" placeholder="SURNAME" required>
+          <input type="number" name="number" id="number" placeholder="CONTACT" required>
 
           <input type="email" name="email" id="email" placeholder="EMAIL" required>
 
           <input type="text" name="subject" id="subject" placeholder="SUBJECT" required>
 
           <textarea name="message" id="message" placeholder="MESSAGE" required></textarea>
-          <div class="error" id="errorMessage"></div>
+          <div class="error" id="errorMessage" style="font-size: 10px;"></div>
           <div class="success" id="successMessage"></div>
         </form>
         <button id="form-submit-btn" onclick="sendMail();">Send Message</button>
@@ -298,19 +298,21 @@
           <li class="close-button" onclick="removeBlur()" id="closeBtn" style="list-style-type: none; text-decoration: none; display: block; position: absolute; right: 5%; top: 5%;"><a><svg xmlns="http://www.w3.org/2000/svg" style="background-color: transparent; cursor: pointer;" height="36px" viewBox="0 -960 960 960" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
         </div>
 
-        <form action="" method="POST">
-          <input type="text" name="name" id="name" placeholder="NAME" required>
+        <form id="emailForm">
+          <input type="text" name="name" id="name2" placeholder="NAME" required>
 
-          <input type="text" name="surname" id="surname" placeholder="SURNAME" required>
+          <input type="number" name="number" id="number2" placeholder="CONTACT" required>
 
-          <input type="email" name="email" id="email" placeholder="EMAIL" required>
+          <input type="email" name="email" id="email2" placeholder="EMAIL" required>
 
           <input type="text" name="subject" id="mysubject" placeholder="SUBJECT" required>
 
-          <textarea name="message" id="message" placeholder="MESSAGE" required></textarea>
+          <textarea name="message" id="message2" placeholder="MESSAGE" required></textarea>
+          <div class="error" id="errorMessage-2" style="font-size: 10px;"></div>
+          <div class="success" id="successMessage-2"></div>
         </form>
 
-        <button id="form-submit-btn">Send Message</button>
+        <button id="form-submit-btn" onclick="hireUsMail();">Send Message</button>
       </div>
 
     <script src="frontend/js/script.js">
